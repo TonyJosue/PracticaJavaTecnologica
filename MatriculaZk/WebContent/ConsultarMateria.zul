@@ -1,0 +1,28 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="modalConsultarMateria" title="" border="normal" width="800px" action="show:slideDown;hide: slideUp" mode="modal">
+<div apply="controlador.ControladorConsultarMateria"/>
+<groupbox id="groupConsultarMateria" mold="3d" >
+	<caption label="Consultar Materia"/>
+	<div id="divConsultarMateria" align="center">
+    
+		<listbox id="listbConsultarMateria" emptyMessage="No hay Materia Registrada">
+	    <listhead>
+	   		 <listheader label="Codigo" align="center" width="50%"  style="text-align:center;"/>
+	    	 <listheader label="Nombre" align="center" width="50%" style="text-align:center;"/>
+	    </listhead>
+	        <template name="model">
+	    	<listitem >
+	    	    
+	    		<listcell  label="${each.codigo } "/>
+	    		<listcell label="${each.nombre }"/>
+	    			
+	    	
+	    	</listitem>
+	    	</template>
+		</listbox>
+	</div>
+	<button id="btnCerrarModalConsultaMateria" label="Cerrar"/>
+</groupbox>
+</window>
+</zk>

@@ -1,0 +1,41 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id ="modalRegistrarMateria" title="" border="normal" width="800px" closable="true" action="show:slideDown;hide: slideUp">
+<div apply="controlador.ControladorMateria"/>
+<style src="/widgets/input/form_sample/style.css" />
+
+  
+    <groupbox id="groupMateria" mold="3d" >
+         
+         <caption label="Registrar Materia" />
+        <div id="divMateria" align="center">
+        <listbox id="listbMateria">
+        	<listitem>
+       			 <listcell >
+       				 <label id="lblCodigo" value="Codigo"/>
+        			 <textbox id="txtbCodigo" width="200px"/>
+       			 </listcell>
+       			 <listcell>
+        			<label id ="lblNombre" value="Nombre"/>
+        			<textbox id ="txtbNombre" width="200px"/>
+     
+        
+        		</listcell>   
+       		 </listitem>
+       
+        </listbox>
+  
+        </div>
+          
+      	  <div id="divButtonMateria" align="center">
+      
+       		 <button label="Guardar" id="btnGuardar"/>
+
+        		<button label="Cancelar" id="btnCancelar"/>
+         </div>
+         <button id="btnCerrarModalMateria" label="Cerrar"/>
+         
+     </groupbox>
+ 
+</window>
+</zk>

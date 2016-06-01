@@ -1,0 +1,36 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title=" MATRICULA" border="normal" >
+<div apply="controlador.ControladorMatricula"/>
+<menubar id="menubar" orient="horizontal" autodrop="true" >
+	<menu label="Alumno" >
+		<menupopup>
+			<menuitem label="Registrar Alumno"/>
+			
+			
+			
+		
+		</menupopup>
+
+	</menu>
+
+	<menu label="Profesor">
+	</menu>
+
+	<menu label="Seccion">
+	</menu>
+
+	<menu label="Materia">
+		<menupopup>
+		<menuitem id="mItemRegistrarMateria" label="Registrar Materia"/>
+		<menuitem id ="mItemModificarMateria" label="Modificar Materia"/>
+		<menuitem id="mItemConsultarMateria" label="Consultar Materia"/>	
+		</menupopup>
+	</menu>
+
+
+
+
+</menubar>
+</window>
+</zk>
