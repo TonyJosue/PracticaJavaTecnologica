@@ -1,0 +1,70 @@
+<?page title="Registro de Alumnos" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="" border="normal">
+<div apply="controlador.ControladorAlumno"/>
+	<caption label="Registrar Alumnos"/>
+	<listbox>
+		<listitem>
+			<listcell>
+				<label value="Cédula:"/>
+				<textbox id="txtCedulaAlumno" value="" />
+			</listcell>
+		</listitem>
+		<listitem>
+			<listcell>
+				<label value="Nombre:"/>
+				<textbox id="txtNombreAlumno" value="" />
+			</listcell>
+		</listitem>
+		<listitem>
+			<listcell>
+				<label value="Sexo"/>
+				<combobox id="cmbSexoAlumno">
+					<comboitem label="Masculino"/>
+					<comboitem label="Femenino"/>
+				</combobox>
+			</listcell>
+		</listitem>
+		<listitem>
+			<listcell>
+				<label value="Edad"/>
+				<textbox id="txtEdadAlumno" value="" />
+			</listcell>
+		</listitem>
+		<listitem>
+			<listcell>
+				<label value="Grado"/>
+				<combobox id="cmbGrado">
+					<comboitem label="7mo"/>
+					<comboitem label="8vo"/>
+					<comboitem label="9no"/>
+				</combobox>
+			</listcell>
+		</listitem>
+		<listitem>
+			<listcell>
+				<label value="Sección"/>
+				<combobox id="cmbSeccionAlumno">
+					<template name="model">
+					<comboitem label="${each.codigo}"/>
+					</template>
+				</combobox>
+			</listcell>
+		</listitem>
+		<listitem id="listItemEstatus" visible="false">
+			<listcell>
+				<label value="Estatus"/>
+				<combobox id="cmbEstatusAlumno">
+					<comboitem label="Activo"/>
+					<comboitem label="Inactivo"/>
+				</combobox>
+			</listcell>
+		</listitem>
+		<listitem>
+			<listcell>
+				<button id="btnGuardarAlumno" label="Guardar"/>
+			</listcell>
+		</listitem>
+	</listbox>
+</window>
+</zk>

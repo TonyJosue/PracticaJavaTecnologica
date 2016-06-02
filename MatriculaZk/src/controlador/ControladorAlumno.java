@@ -4,6 +4,13 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import org.zkoss.zk.ui.select.annotation.Listen;
+import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zul.Combobox;
+import org.zkoss.zul.ListModelList;
+import org.zkoss.zul.Listbox;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import Modelos.Alumno;
 import Modelos.Seccion;
@@ -177,7 +184,19 @@ public class ControladorAlumno extends ControladorMatricula{
 
 	}
 	
+	//Métodos aplicados en ZK
+	@Wire
+	private Combobox cmbSeccionAlumno;
 	
+	@Listen("onCreate=#cmbSeccionAlumno")
+	public void mostrarSeccion(){
+		SeccionDAO secciondao = new SeccionDAO();
+		ListModelList<Seccion> listaSeccion = new ListModelList<>();
+		listaSeccion.addAll(secciondao.listar());
+		System.out.println(listaSeccion);
+		cmbSeccionAlumno.setModel(listaSeccion);
+		
+	}
 	
 		
 

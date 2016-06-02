@@ -33,6 +33,10 @@ import dao.impl.MateriaDAO;
 import sun.awt.ModalExclude;
 
 public class ControladorMateria extends SelectorComposer<Component> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static MateriaDAO materiadao = new MateriaDAO();
 	static Scanner sc = new Scanner(System.in);
 	
