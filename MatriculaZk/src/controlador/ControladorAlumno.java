@@ -205,6 +205,7 @@ public class ControladorAlumno extends ControladorMatricula{
 	@Listen("OnClick=#btnGuardarAlumno")
 	public void guardarAlumno(){
 		Messagebox.show("Prueba de resolución de conflicto");
+		Messagebox.show("hOLA Soy yo");	
 	}
 
  
