@@ -10,6 +10,7 @@ import org.zkoss.zul.Button;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Listbox;
+import org.zkoss.zul.Messagebox;
 
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
@@ -203,7 +204,7 @@ public class ControladorAlumno extends ControladorMatricula{
 	}
 	@Listen("OnClick=#btnGuardarAlumno")
 	public void guardarAlumno(){
-		
+		Messagebox.show("hOLA Soy yo");	
 	}
 
  
