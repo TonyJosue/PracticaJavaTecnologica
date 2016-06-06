@@ -207,6 +207,7 @@ public class ControladorAlumno extends ControladorMatricula{
 		Messagebox.show("Prueba de resolución de conflicto");
 		Messagebox.show("hOLA Soy yo");	
 		Messagebox.show("Si soy yo el conflicto que no se como vas a resolver");
+		Messagebox.show("Cansada del conflicto");
 	}
 
  
