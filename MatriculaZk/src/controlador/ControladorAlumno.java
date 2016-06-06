@@ -6,6 +6,7 @@ import java.util.Scanner;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zul.Button;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Listbox;
@@ -188,6 +189,9 @@ public class ControladorAlumno extends ControladorMatricula{
 	@Wire
 	private Combobox cmbSeccionAlumno;
 	
+	@Wire
+	private Button btnGuardarAlumno;
+	
 	@Listen("onCreate=#cmbSeccionAlumno")
 	public void mostrarSeccion(){
 		SeccionDAO secciondao = new SeccionDAO();
@@ -197,8 +201,10 @@ public class ControladorAlumno extends ControladorMatricula{
 		cmbSeccionAlumno.setModel(listaSeccion);
 		
 	}
-	
+	@Listen("OnClick=#btnGuardarAlumno")
+	public void guardarAlumno(){
 		
+	}
 
  
 }
