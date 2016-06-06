@@ -1,4 +1,4 @@
-<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?page title="" contentType="text/html;charset=UTF-8"?>
 <zk>
 <window id="modalConsultarMateria" title="" border="normal" width="800px" action="show:slideDown;hide: slideUp" mode="modal">
 <div apply="controlador.ControladorConsultarMateria"/>

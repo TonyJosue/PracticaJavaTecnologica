@@ -13,6 +13,10 @@ import dao.impl.SeccionDAO;
 
 
 public class ControladorSeccion extends ControladorMatricula {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static Scanner sc = new Scanner(System.in);
 	static SeccionDAO secciondao =new SeccionDAO();
 	
