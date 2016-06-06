@@ -208,6 +208,7 @@ public class ControladorAlumno extends ControladorMatricula{
 		Messagebox.show("hOLA Soy yo");	
 		Messagebox.show("Resolución de conflicto 2");	
 		Messagebox.show("Si soy yo el conflicto que no se como vas a resolver");
+		Messagebox.show("Otro conflicto más!!!!");	
 	}
 
  
