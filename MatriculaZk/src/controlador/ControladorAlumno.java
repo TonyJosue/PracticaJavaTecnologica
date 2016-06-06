@@ -206,6 +206,7 @@ public class ControladorAlumno extends ControladorMatricula{
 	public void guardarAlumno(){
 		Messagebox.show("Prueba de resolución de conflicto");
 		Messagebox.show("hOLA Soy yo");	
+		Messagebox.show("Resolución de conflicto 2");	
 		Messagebox.show("Si soy yo el conflicto que no se como vas a resolver");
 		Messagebox.show("Cansada del conflicto");
 	}
