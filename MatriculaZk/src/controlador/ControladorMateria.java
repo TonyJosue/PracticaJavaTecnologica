@@ -11,6 +11,7 @@ import org.zkoss.bind.annotation.Init;
 import org.zkoss.zhtml.Messagebox;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
@@ -20,6 +21,7 @@ import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Textbox;
 import org.zkoss.zul.Window;
 
+import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
 import com.sun.org.apache.xpath.internal.operations.Div;
 
 import Modelos.Alumno;
@@ -180,12 +182,19 @@ public class ControladorMateria extends SelectorComposer<Component> {
 
 	}
 
-	@Listen("onClick=#btnCancelar")
-	public void cancelar() {
+//	@Listen("onClick=#btnCancelar ")
+	public void cancelar(Component padre) {
+		
+	//if (padre instanceof Button){
+        		
+        	
+        
 		txtbCodigo.setValue("");
 		txtbNombre.setValue("");
+		Messagebox.show("holita");
+        	}
 
-	}
+	
 
 	@Listen("onClick=#btnCerrarModalMateria")
 	public void cerrarModal(Event e) {

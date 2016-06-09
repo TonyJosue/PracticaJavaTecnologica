@@ -19,12 +19,14 @@ import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Listbox;
+import org.zkoss.zul.Listcell;
 import org.zkoss.zul.Messagebox;
 import org.zkoss.zul.Window;
 
 import com.sun.java.swing.plaf.windows.resources.windows;
 
 import Modelos.Materia;
+import bsh.org.objectweb.asm.Label;
 import dao.impl.MateriaDAO;
 
 public class ControladorConsultarMateria extends SelectorComposer<Component> {
@@ -52,10 +54,10 @@ public class ControladorConsultarMateria extends SelectorComposer<Component> {
 	
 	 	//@Init
 	    //@ContextParam(ContextType.COMPONENT)Component comp
-	@Wire("#modalConsultarMateria")
+	@Wire("#modalConsultarMateria" )
 		public  void Inicializar(Window comp){
-			
-			System.out.println("holaaaa1!!!!!!");
+		
+		System.out.println("holaaaa1!!!!!!");
 			try {
 			//4	super.doAfterCompose(comp);
 				
@@ -90,19 +92,26 @@ public class ControladorConsultarMateria extends SelectorComposer<Component> {
 		
 		
 		@Listen("onClick=#btnCerrarModalConsultaMateria")
-		public void cerrarModalConsultaMateria(){
+		public void cerrarModalConsultaMateria(Listcell e){
 			modalConsultarMateria.detach();
 			
+			
 		}
-		@Listen("onSelect=#listbConsultarMateria")
+		@Listen("onSelect=#listbConsultarMateria > lishead >listheader > listitem > listcell > label")
 		public void mostrarModal(Event e){
-			Messagebox.show("hola2");
-		Materia a= (Materia)listbConsultarMateria.getSelectedItem().getValue() ;
-	    hmateria.add(a);
-	
-		System.out.println(hmateria);
-		Window window = (Window) Executions.createComponents("/Materia.zul", null, null);
-		window.doModal();
+			
+			/**Messagebox.show("hola2");
+		//Materia a= (Materia)listbConsultarMateria.getSelectedItem().getValue() ;
+	   @SuppressWarnings("unchecked")
+//	Map<String, Materia> map = new HashMap<Materia>();
+	//     map.put("materia", a);
+	     
+	   
+	//	System.out.println(hmateria);
+		//Window window = (Window) Executions.createComponents("/Materia.zul", null, null);
+	//	window.doModal();
+			*/
+			
 			
 			
 		}

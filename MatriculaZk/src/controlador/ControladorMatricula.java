@@ -14,9 +14,6 @@ import org.zkoss.zul.Window;
 
 public class ControladorMatricula extends SelectorComposer<Component>{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	/**Componente del menu Primcipal**/
 	
