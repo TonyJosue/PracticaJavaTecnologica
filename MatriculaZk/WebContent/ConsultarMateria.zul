@@ -6,6 +6,7 @@
 	<caption label="Consultar Materia"/>
 	<div id="divConsultarMateria" align="center">
     
+    
 		<listbox id="listbConsultarMateria" emptyMessage="No hay Materia Registrada">
 	    <listhead>
 	   		 <listheader label="Codigo" align="center" width="50%"  style="text-align:center;"/>
